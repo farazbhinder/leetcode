@@ -1,3 +1,11 @@
+# java intellij ignore files
 **/.idea
 **/out
 **/**.iml
+
+# csharp visual studio ignore files
+**/**.sln
+**/**.csproj
+**/obj
+**/bin
+**/.vs/
