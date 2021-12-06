@@ -18,10 +18,8 @@ public class Main {
                 // check both sides
                 peak = i;
             } else if (i==0 && nums[i] > nums[i+1] && nums[i] > nums[peak]) {
-                // check both sides
                 peak = i;
             } else if (i==nums.length-1 && nums[i] > nums[i-1] && nums[i] > nums[peak]) {
-                // check both sides
                 peak = i;
             }
         }
