@@ -9,7 +9,7 @@ public class Main {
         ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
         ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4, null)));
         Solution s = new Solution();
-        s.mergeTwoLists(list1, list2);
+        s.mergeTwoLists2(list1, list2);
     }
 }
 
@@ -62,5 +62,28 @@ class Solution {
             listNodes.get(i).next = listNodes.get(i+1);
         }
         return listNodes.get(0);
+    }
+
+    // got a hint by viewing solutions
+    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+        ListNode res = new ListNode(-1);
+        ListNode head = res;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                res.next = list1;
+                list1 = list1.next;
+                res = res.next;
+            } else {
+                res.next = list2;
+                list2 = list2.next;
+                res = res.next;
+            }
+        }
+        if (list1 == null) {
+            res.next = list2;
+        } else if (list2 == null) {
+            res.next = list1;
+        }
+        return head.next;
     }
 }
