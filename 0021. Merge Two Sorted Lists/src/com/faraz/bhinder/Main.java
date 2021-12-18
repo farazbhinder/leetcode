@@ -58,7 +58,6 @@ class Solution {
                 head2 = head2.next;
             }
         }
-        ListNode ptr = null;
         for (int i = 0; i < listNodes.size()-1; i++) {
             listNodes.get(i).next = listNodes.get(i+1);
         }
