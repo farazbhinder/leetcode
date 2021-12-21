@@ -1,5 +1,6 @@
 package com.faraz.bhinder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -31,13 +32,18 @@ class TreeNode {
 }
 
 class Solution {
+    List<Integer> list = new ArrayList<>();
+
     public List<Integer> preorderTraversal(TreeNode root) {
-        return null;
+        list.clear();
+        preOrderHelper(root);
+        return list;
+
     }
 
     public void preOrderHelper(TreeNode root) {
         if (root != null) {
-            System.out.println(root.val);
+            list.add(root.val);
         }
         if (root != null && root.left != null) {
             preOrderHelper(root.left);
