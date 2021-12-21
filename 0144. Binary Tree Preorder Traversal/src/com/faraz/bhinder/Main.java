@@ -13,7 +13,7 @@ public class Main {
                         new TreeNode(6), new TreeNode(7)));
         Solution s = new Solution();
 
-        s.preOrderHelper(root);
+        List<Integer> preOrderList = s.preorderTraversal(root);
     }
 }
 
@@ -41,7 +41,7 @@ class Solution {
 
     }
 
-    public void preOrderHelper(TreeNode root) {
+    private void preOrderHelper(TreeNode root) {
         if (root != null) {
             list.add(root.val);
         }
