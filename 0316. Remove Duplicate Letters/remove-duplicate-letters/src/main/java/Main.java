@@ -11,9 +11,12 @@ public class Main {
 //        String result = SolutionV1.removeDuplicateLetters("thesqtitxyetpxloeevdeqifkz"); // time limit exceeded -> hesitxyplovdqfkz
 //        String result = SolutionV1.removeDuplicateLetters("mitnlruhznjfyzmtmfnstsxwktxlboxutbic"); // time limit exceeded
 
-        String result = SolutionV2.removeDuplicateLetters("thesqtitxyetpxloeevdeqifkz");
+//        String result = SolutionV2.removeDuplicateLetters("thesqtitxyetpxloeevdeqifkz");
 //        String result = SolutionV2.removeDuplicateLetters("abacb"); // abc
 //        String result = SolutionV2.removeDuplicateLetters("acbac"); // abc
+
+        String result = SolutionV3.removeDuplicateLetters("thesqtitxyetpxloeevdeqifkz");
+//        String result = SolutionV3.removeDuplicateLetters("abacb"); // abc
 
         System.out.println(result);
     }
